@@ -33,6 +33,7 @@ $routes->get('/', 'Home::index');
 // $routes->get('/insere', 'Home::insere');
 $routes->get('/login', 'Login::index');
 $routes->post('login/signIn', 'Login::signIn');
+$routes->get('login/signOut', 'Login::signOut');
 $routes->get('/home', 'Login::dashboard');
 
 /*

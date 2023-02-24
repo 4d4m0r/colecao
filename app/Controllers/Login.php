@@ -13,11 +13,11 @@ class Login extends BaseController
 
     public function dashboard()
 	{
-		return view('admin/home');
+		return view('admin/template/header')
+			.view('admin/dashboard');
 	}
 
-	public function signIn()
-	{
+	public function signIn(){
 		$nome = $this->request->getPost('inputName');
 		$password = $this->request->getPost('inputPassword');
 
@@ -41,8 +41,7 @@ class Login extends BaseController
 		}
 	}
 
-	public function signOut()
-	{
+	public function signOut(){
 		session()->destroy();
 		return redirect()->to(base_url());
 	}

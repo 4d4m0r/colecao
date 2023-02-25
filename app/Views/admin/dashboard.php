@@ -1,1 +1,3 @@
-<div class="container"><h2>Clique <?php echo anchor('login/signOut', ' aqui') ?> para sair.</h2></div>
+<div class="container mt-4">
+    teste
+</div>

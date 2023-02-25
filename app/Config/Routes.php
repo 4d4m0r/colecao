@@ -34,7 +34,17 @@ $routes->get('/', 'Home::index');
 $routes->get('/login', 'Login::index');
 $routes->post('login/signIn', 'Login::signIn');
 $routes->get('login/signOut', 'Login::signOut');
+
+
 $routes->get('/home', 'Login::dashboard');
+
+// CRUD MEIO DE CULTIVO
+$routes->get('/meio', 'MeioCultivo::index');
+$routes->get('/meio/delete/(:num)', 'MeioCultivo::delete/$1');
+$routes->get('/meio/create/', 'MeioCultivo::create');
+$routes->post('/meio/store/', 'MeioCultivo::store');
+$routes->get('/meio/edit/(:num)', 'MeioCultivo::singleMeio/$1');
+$routes->post('/update_meio', 'MeioCultivo::update');
 
 /*
  * --------------------------------------------------------------------

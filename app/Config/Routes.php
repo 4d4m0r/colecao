@@ -36,7 +36,7 @@ $routes->post('login/signIn', 'Login::signIn');
 $routes->get('login/signOut', 'Login::signOut');
 
 
-$routes->get('/home', 'Login::dashboard');
+$routes->get('/dashboard', 'Login::dashboard');
 
 // CRUD MEIO DE CULTIVO
 $routes->get('/meio', 'MeioCultivo::index');

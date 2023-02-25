@@ -30,7 +30,7 @@ class Login extends BaseController
 			if (password_verify($password, $hashUsuario)) {
 				session()->set('isLoggedIn', true);
 				session()->set('nome', $dadosUsuario['nome_admin']);
-				return redirect()->to(base_url('home'));
+				return redirect()->to(base_url('/dashboard'));
 			} else {
 				session()->setFlashData('msg', 'Usuário ou Senha incorretos');
 				return redirect()->to('/login');

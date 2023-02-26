@@ -97,7 +97,7 @@
 
     <!-- Barra lateral -->
     <div class="sidebar">
-        <a href="#">Espécies</a>
+        <?php echo anchor(base_url('/especie'), 'Espécies', array('class' => 'a')) ?>
         <a href="#">Culturas</a>
         <?php echo anchor(base_url('/meio'), 'Meio de Cultivo', array('class' => 'a')) ?>
     </div>

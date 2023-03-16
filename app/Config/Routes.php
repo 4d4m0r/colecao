@@ -63,7 +63,6 @@ $routes->post('/cultura/store/', 'Cultura::store');
 $routes->get('/cultura/visualizar/(:num)', 'Cultura::verCultura/$1');
 $routes->get('/cultura/edit/(:num)', 'Cultura::singleCultura/$1');
 $routes->post('/update_cultura', 'Cultura::update');
-$routes->post('/action', 'Cultura::action');
 $routes->post('/especie_cultura', 'Cultura::especie_cultura');
 
 /*

@@ -50,24 +50,7 @@ class Cultura extends BaseController
                 'meios' => $meio->getDadosMeio(),
             ]);
     }
-
-    function action()
-    {
-        if ($this->request->getVar('action')) {
-            $action = $this->request->getVar('action');
-
-            if ($action == 'get_estado') {
-                $estadoModel = new EstadoModel();
-                $estado = $estadoModel->where('id_pais_estados', $this->request->getVar('id_pais'))->findAll();
-                echo json_encode($estado);
-            }
-            if ($action == 'get_cidade') {
-                $cidadeModel = new CidadeModel();
-                $cidade = $cidadeModel->where('id_estado_cidade', $this->request->getVar('id_estado'))->findAll();
-                echo json_encode($cidade);
-            }
-        }
-    }
+    
     function especie_cultura()
     {
         $especieModel = new EspecieModel();

@@ -39,6 +39,14 @@
             padding-top: 50px;
         }
 
+        .a {
+            padding: 6px 8px 6px 0px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            display: block;
+        }
+
         /* Estilizando os links da barra lateral */
         .sidebar a {
             padding: 6px 8px 6px 16px;
@@ -67,6 +75,36 @@
         .navbar-nav.navbar-right {
             margin-right: auto;
         }
+
+
+        select {
+            display: block;
+            width: 100%;
+            height: calc(2.5rem + 2px);
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        select.form-select {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
     </style>
     <script>
         function confirma() {
@@ -82,7 +120,7 @@
 
     <!-- Barra de navegação -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">Dashboard</a>
+        <?php echo anchor(base_url('/dashboard'), 'Dashboard', array('class' => 'a')) ?>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -98,6 +136,6 @@
     <!-- Barra lateral -->
     <div class="sidebar">
         <?php echo anchor(base_url('/especie'), 'Espécies', array('class' => 'a')) ?>
-        <a href="#">Culturas</a>
+        <?php echo anchor(base_url('/cultura'), 'Cultura', array('class' => 'a')) ?>
         <?php echo anchor(base_url('/meio'), 'Meio de Cultivo', array('class' => 'a')) ?>
     </div>

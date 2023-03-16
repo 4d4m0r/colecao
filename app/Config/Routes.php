@@ -55,6 +55,17 @@ $routes->get('/especie/visualizar/(:num)', 'Especie::verEspecie/$1');
 $routes->get('/especie/edit/(:num)', 'Especie::singleEspecie/$1');
 $routes->post('/update_especie', 'Especie::update');
 
+// CRUD CULTURA
+$routes->get('/cultura', 'Cultura::index');
+$routes->get('/cultura/delete/(:num)', 'Cultura::delete/$1');
+$routes->get('/cultura/create/', 'Cultura::create');
+$routes->post('/cultura/store/', 'Cultura::store');
+$routes->get('/cultura/visualizar/(:num)', 'Cultura::verCultura/$1');
+$routes->get('/cultura/edit/(:num)', 'Cultura::singleCultura/$1');
+$routes->post('/update_cultura', 'Cultura::update');
+$routes->post('/action', 'Cultura::action');
+$routes->post('/especie_cultura', 'Cultura::especie_cultura');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

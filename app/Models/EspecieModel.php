@@ -27,6 +27,7 @@ class EspecieModel extends Model
     function getIdEspecie($data)
     {
         $db = \Config\Database::connect();
+
         $nome_especie = $data['nome_especie'];
         $status_tax_especie = $data['status_tax_especie'];
         $tipos_org_especie = $data['tipos_org_especie'];
@@ -34,6 +35,7 @@ class EspecieModel extends Model
         $procedencia_especie = $data['procedencia_especie'];
         $substrato_especie = $data['substrato_especie'];
         $riscos_especie = $data['riscos_especie'];
+
         $query = $db->query("SELECT * FROM especie 
                                 WHERE nome_especie = '$nome_especie' 
                                 AND status_tax_especie ='$status_tax_especie'
@@ -42,12 +44,13 @@ class EspecieModel extends Model
                                 AND procedencia_especie ='$procedencia_especie'
                                 AND substrato_especie ='$substrato_especie'
                                 AND riscos_especie ='$riscos_especie'");
+        
+        $row =  $query->getResultArray();
 
-        return  $query->getResultArray();
+        return $row;
     }
 
-    function getDadosEspecie()
-    {
+    function getDadosEspecie(){
         $db = \Config\Database::connect();
 
         $query = $db->query("SELECT DISTINCT especie.id_especie,especie.nome_especie FROM especie");
@@ -55,8 +58,7 @@ class EspecieModel extends Model
         return  $query->getResultArray();
     }
 
-    function verificaExisteEspecie($especie)
-    {
+    function verificaExisteEspecie($especie){
         $db = \Config\Database::connect();
 
         $nome_especie = $especie['nome_especie'];
@@ -84,6 +86,7 @@ class EspecieModel extends Model
         if (empty($riscos_especie)) {
             $riscos_especie = "null";
         }
+
         $query = $db->query("SELECT * FROM especie 
                                 WHERE nome_especie = '$nome_especie' 
                                 AND status_tax_especie ='$status_tax_especie'

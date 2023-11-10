@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container"style="margin-top: 100px;">
     <h1>Visualizar espécie: <?php echo $especie['nome_especie']?></h1>
     <div class="form-group">
         <label for="nome_especie">Nome:</label>

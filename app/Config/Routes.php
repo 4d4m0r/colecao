@@ -65,6 +65,9 @@ $routes->get('/cultura/edit/(:num)', 'Cultura::singleCultura/$1');
 $routes->post('/update_cultura', 'Cultura::update');
 $routes->post('/especie_cultura', 'Cultura::especie_cultura');
 
+// PLANILHA
+$routes->get('/export','Planilha::export');
+$routes->post('/import','Planilha::import');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

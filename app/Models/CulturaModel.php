@@ -104,9 +104,7 @@ class CulturaModel extends Model
     function verificaExisteCultura($cultura){
         $db = \Config\Database::connect();
 
-        $n_dpua_cultura= $cultura['n_dpua_cultura'];
-
-        $query = $db->query("SELECT * FROM cultura WHERE n_dpua_cultura = '$n_dpua_cultura'");
+        $query = $db->query("SELECT * FROM cultura WHERE n_dpua_cultura = '$cultura'");
 
         $row = $query->getResultArray();
         if(empty($row)){

@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container"style="margin-top: 100px;">
     <h2>Novo Meio de Cultivo:</h2>
     <form method="POST" action="<?= base_url('/update_meio') ?>" class="form-inline">
         <div class="form-group mx-sm-3 mb-2">

@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container"style="margin-top: 100px;">
     <h1>Editar espécie: <?php echo $especie['nome_especie'] ?></h1>
     <form action="<?= base_url('/update_especie') ?>" method="post">
         <input type="hidden" name="id_especie" id="id_especie" value="<?php echo $especie['id_especie']?>">

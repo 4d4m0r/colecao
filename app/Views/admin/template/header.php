@@ -2,9 +2,10 @@
 <html>
 
 <head>
-    <title>Dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+
     <!-- Importando o CSS do Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Importando o JavaScript do Bootstrap -->
@@ -12,9 +13,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <!-- DataTables -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
     <style>
         .acoes {
             float: right;
@@ -30,9 +33,9 @@
         .sidebar {
             height: 100%;
             width: 200px;
-            position: fixed;
+            /* position: fixed; */
             z-index: 1;
-            top: 50px;
+            top: 50px; 
             left: 0;
             background-color: #212529;
             overflow-x: hidden;
@@ -119,7 +122,7 @@
 <body>
 
     <!-- Barra de navegação -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
         <?php echo anchor(base_url('/dashboard'), 'Dashboard', array('class' => 'a')) ?>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -134,7 +137,7 @@
     </nav>
 
     <!-- Barra lateral -->
-    <div class="sidebar">
+    <div class="sidebar fixed-top">
         <?php echo anchor(base_url('/especie'), 'Espécies', array('class' => 'a')) ?>
         <?php echo anchor(base_url('/cultura'), 'Cultura', array('class' => 'a')) ?>
         <?php echo anchor(base_url('/meio'), 'Meio de Cultivo', array('class' => 'a')) ?>

@@ -1,20 +1,20 @@
+<link href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css" rel="stylesheet">
+
+<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('#tabela-dados').DataTable({
-            "paging": true, // Ativa a paginação
-            "ordering": true, // Ativa a ordenação
-            "searching": true // Ativa a busca
-        });
-    });
+    $(function() {
+        $('#table').bootstrapTable()
+    })
 </script>
-<div class="container mt-4">
+<div class="container"style="margin-top: 100px;">
     <div style="overflow: hidden;" class="mb-4">
         <div style="float: left;"><h2>Meios de Cultivo</h2></div>
         <div style="float: right;">
             <?php echo anchor(base_url('meio/create/'),'Adicionar',['class' => 'btn btn-primary'])?>
         </div>
     </div>
-    <table id="tabela-dados" class="table">
+    <table data-toggle="table" data-pagination="true" data-search="true" data-advanced-search="true" style="width:100%">
         <thead>
             <tr>
                 <th>Meio</th>

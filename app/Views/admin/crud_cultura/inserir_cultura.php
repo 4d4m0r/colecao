@@ -100,7 +100,7 @@
     });
   });
 </script>
-<div class="container mt-4">
+<div class="container" style="margin-top: 100px;">
   <h2>Adicionar Cultura</h2>
   <hr>
   <form action="<?= base_url('/cultura/store/') ?>" method="POST">

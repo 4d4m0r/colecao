@@ -1,9 +1,12 @@
-<script>
-    $(document).ready(function() {
-        $('#especie').DataTable();
-    });
+<link href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css" rel="stylesheet">
+
+<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script><script>
+    $(function() {
+        $('#table').bootstrapTable()
+    })
 </script>
-<div class="container mt-4">
+<div class="container"style="margin-top: 100px;">
     <div style="overflow: hidden;" class="mb-4">
         <div style="float: left;">
             <h2>Espécies</h2>
@@ -12,7 +15,7 @@
             <?php echo anchor(base_url('especie/create/'), 'Adicionar', ['class' => 'btn btn-primary']) ?>
         </div>
     </div>
-    <table class="table" id="especie">
+    <table data-toggle="table" data-pagination="true" data-search="true" data-advanced-search="true" style="width:100%">
         <thead>
             <th>Nome espécie</th>
             <th>Status Tax.</th>

@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container"style="margin-top: 100px;">
     <h2>Visualizar Cultura: <?php echo $cultura[0]['n_dpua_cultura'] ?></h2>
     <hr>
     <div class="container mt-3">

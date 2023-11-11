@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logue-se no sistema</title>
+    <title>Coleção</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
     <style>
         .form-signin {
             width: 100%;
@@ -15,10 +14,14 @@
             padding-top: 220px;
             margin: auto;
         }
+
+        #about {
+            margin-bottom: 100px; /* Ajuste a altura conforme necessário */
+        }
     </style>
 </head>
 
-<body class="text-center">
+<body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="<?php echo base_url('') ?>">Fungos</a>
@@ -28,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?php echo base_url('login') ?>">Login</a>
+                        <a class="nav-link active" href="<?php echo base_url('login') ?>">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('sobre') ?>">Sobre</a>
@@ -40,28 +43,3 @@
             </div>
         </div>
     </nav>
-    <main class="form-signin">
-        <form action="<?php echo base_url('login/signIn') ?>" method="post">
-            <h1 class="h3 mb-3 fw-normal">Por favor, logue-se</h1>
-            <label for="text" class="visually-hidden">Nome</label>
-            <input type="text" name="inputName" id="text" class="form-control" placeholder="Seu nome" required autofocus>
-            <label for="inputPassword" class="visually-hidden">Senha</label>
-            <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Sua senha" required>
-
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Logar</button>
-            <p class="mt-5 mb-3 text-muted">&copy; 2023 - Coleções</p>
-        </form>
-        <?php $msg = session()->getFlashData('msg') ?>
-        <?php if (!empty($msg)) : ?>
-            <div class="alert alert-danger">
-                <?php echo $msg ?>
-            </div>
-        <?php endif; ?>
-    </main>
-
-    <footer class="bg-dark text-light text-center py-3 mt-4 fixed-bottom">
-        <p>&copy; 2023 Catálogo Coleção de Cultura DPUA. Todos os direitos reservados.</p>
-    </footer>
-</body>
-
-</html>

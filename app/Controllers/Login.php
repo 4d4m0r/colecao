@@ -8,7 +8,9 @@ class Login extends BaseController
 {
 	public function index()
 	{
-		return view('login');
+		return view('user/template/header')
+            . view('user/login')
+			. view('user/template/footer');
 	}
 
     public function dashboard()

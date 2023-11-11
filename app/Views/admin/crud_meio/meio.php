@@ -7,11 +7,18 @@
         $('#table').bootstrapTable()
     })
 </script>
-<div class="container"style="margin-top: 100px;">
+<div class="loader-wrapper">
+    <div class="spinner-border text-dark loader" role="status">
+        <span class="visually-hidden"></span>
+    </div>
+</div>
+<div class="container" style="margin-top: 100px;">
     <div style="overflow: hidden;" class="mb-4">
-        <div style="float: left;"><h2>Meios de Cultivo</h2></div>
+        <div style="float: left;">
+            <h2>Meios de Cultivo</h2>
+        </div>
         <div style="float: right;">
-            <?php echo anchor(base_url('meio/create/'),'Adicionar',['class' => 'btn btn-primary'])?>
+            <?php echo anchor(base_url('meio/create/'), 'Adicionar', ['class' => 'btn btn-primary']) ?>
         </div>
     </div>
     <table data-toggle="table" data-pagination="true" data-search="true" data-advanced-search="true" style="width:100%">

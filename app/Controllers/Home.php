@@ -10,6 +10,16 @@ class Home extends BaseController
         return view('home');
     }
 
+    public function sobre()
+    {
+        return view('sobre');
+    }
+
+    public function contato()
+    {
+        return view('contato');
+    }
+
     // public function insere(){
     //     $dados = [
     //         'nome_admin' => "admin",

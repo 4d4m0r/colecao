@@ -1,12 +1,18 @@
 <link href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css" rel="stylesheet">
 
 <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
-<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script><script>
+<script src="https://unpkg.com/bootstrap-table@1.22.1/dist/extensions/toolbar/bootstrap-table-toolbar.min.js"></script>
+<script>
     $(function() {
         $('#table').bootstrapTable()
     })
 </script>
-<div class="container"style="margin-top: 100px;">
+<div class="loader-wrapper">
+    <div class="spinner-border text-dark loader" role="status">
+        <span class="visually-hidden"></span>
+    </div>
+</div>
+<div class="container" style="margin-top: 100px;">
     <div style="overflow: hidden;" class="mb-4">
         <div style="float: left;">
             <h2>Espécies</h2>

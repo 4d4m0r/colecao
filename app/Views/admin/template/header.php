@@ -35,7 +35,7 @@
             width: 200px;
             /* position: fixed; */
             z-index: 1;
-            top: 50px; 
+            top: 50px;
             left: 0;
             background-color: #212529;
             overflow-x: hidden;
@@ -109,6 +109,34 @@
             appearance: none;
         }
     </style>
+
+    <style>
+        .loader-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            /* Fundo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+        }
+    </style>
+
+    <script>
+        $(window).on("load", function() {
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+
     <script>
         function confirma() {
             if (!confirm('Deseja excluir o registro?')) {

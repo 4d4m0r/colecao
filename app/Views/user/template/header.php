@@ -11,7 +11,7 @@
         .form-signin {
             width: 100%;
             max-width: 330px;
-            padding-top: 220px;
+            padding-top: 50px;
             margin: auto;
         }
 

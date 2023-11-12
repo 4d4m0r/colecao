@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\UsuarioModel;
+use App\Models\CulturaModel;
 
 class Home extends BaseController
 {
@@ -26,6 +26,14 @@ class Home extends BaseController
             . view('user/contato')
             . view('user/template/footer');
     }
+
+    public function searchCultura() {
+        $nome = $this->request->getPost('nome');
+        $data['culturas'] = (new CulturaModel())->getDadosCulturaPublica($nome);
+    
+        return view('user/cultura_results', $data);
+    }
+    
 
     // public function insere(){
     //     $dados = [

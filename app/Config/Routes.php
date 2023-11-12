@@ -32,6 +32,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/sobre', 'Home::sobre');
 $routes->get('/contato', 'Home::contato');
+$routes->post('/searchCultura', 'Home::searchCultura');
 // $routes->get('/insere', 'Home::insere');
 $routes->get('/login', 'Login::index');
 $routes->post('login/signIn', 'Login::signIn');

@@ -36,7 +36,8 @@ class Filters extends BaseConfig
                     'login/',
                     '/',
                     'sobre',
-                    'contato'
+                    'contato',
+                    'searchCultura'
                 ]
             ]
             // 'honeypot',

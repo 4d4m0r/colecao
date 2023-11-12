@@ -16,13 +16,47 @@
         }
 
         #about {
-            margin-bottom: 100px; /* Ajuste a altura conforme necessário */
+            margin-bottom: 100px;
+            /* Ajuste a altura conforme necessário */
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        function searchCultura() {
+            var nome = document.getElementById('culturaSearch').value;
+            console.log(nome)
+            $.ajax({
+                url: '<?= base_url('/searchCultura') ?>',
+                type: 'POST',
+                data: {
+                    nome: nome
+                },
+                success: function(data) {
+                    $('#culturaResults').html(data);
+                }
+            });
+        }
+    </script>
+
+    <style>
+        /* Adicione esta seção ao seu estilo existente */
+
+        .navbar-nav .nav-item:hover {
+            background-color: #e0e0e0;
+            /* Cor de fundo ao passar o mouse */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #000 !important;;
+            /* Cor do texto ao passar o mouse */
+        }
+    </style>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="<?php echo base_url('') ?>">Fungos</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +65,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="<?php echo base_url('login') ?>">Login</a>
+                        <a class="nav-link" href="<?php echo base_url('login') ?>">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('sobre') ?>">Sobre</a>

@@ -13,7 +13,7 @@
     <div id="catalog-content">
         <!-- Seção sobre a coleção DPUA -->
         <section>
-            <h2>Sobre a Coleção DPUA</h2>
+            <h4>Sobre a Coleção DPUA</h4>
             <p>
                 No acervo DPUA estão depositados fungos filamentosos e unicelulares (leveduras),
                 bactérias do gênero Bacillus, Streptomyces, Nocardia. Entre esses microrganismos,
@@ -29,7 +29,7 @@
 
         <!-- Seção de atividades e serviços -->
         <section>
-            <h2>Atividades e Serviços</h2>
+            <h4>Atividades e Serviços</h4>
             <p>Predominantemente, a finalidade da coleção abrange a conservação de fungos
                 filamentosos e unicelulares produtores de biocompostos para aplicação na indústria de
                 alimentos, farmacêutica, limpeza de efluentes industriais e de interesse médico.
@@ -67,7 +67,7 @@
 
         <!-- Seção sobre a conservação de microrganismos -->
         <section>
-            <h2>Conservação de Microrganismos</h2>
+            <h4>Conservação de Microrganismos</h4>
             <p>Microrganismos depositados em coleções de cultura são base da maior parte do
                 conhecimento real da diversidade biológica. A identificação e a conservação de novas
                 espécies estão relacionadas com a proteção in-situ da biodiversidade e a conservação ex-situ

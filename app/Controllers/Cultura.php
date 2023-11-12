@@ -59,13 +59,10 @@ class Cultura extends BaseController
     }
     public function data($data)
     {
-        //dd($data);
         $dat = str_replace('/', '-', $data);
         $newdate = strtotime($dat);
-        //dd($newdate);
         $newformat = date('Y-m-d', $newdate);
         return $newformat;
-        //return date("Y-m-d", strtotime($data));
     }
 
     function get_cidade_estado_nome($city_id, $state_id) {

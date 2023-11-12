@@ -132,6 +132,28 @@
     </style>
 
     <script>
+        $(document).ready(function() {
+            $('#id_especie').change(function() {
+                var especieId = $(this).val();
+
+                if (especieId !== '') {
+                    $.ajax({
+                        url: '<?= base_url('/get_especie_details') ?>', // Substitua pelo URL real em seu projeto
+                        type: 'POST',
+                        data: {
+                            id_especie: especieId
+                        },
+                        success: function(data) {
+                            $('#especieDetails').html(data);
+                        }
+                    });
+                } else {
+                    $('#especieDetails').html('');
+                }
+            });
+        });
+    </script>
+    <script>
         $(window).on("load", function() {
             $(".loader-wrapper").fadeOut("slow");
         });

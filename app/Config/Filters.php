@@ -37,7 +37,8 @@ class Filters extends BaseConfig
                     '/',
                     'sobre',
                     'contato',
-                    'searchCultura'
+                    'searchCultura',
+                    'get_especie_details'
                 ]
             ]
             // 'honeypot',

@@ -54,6 +54,7 @@ $routes->get('/especie', 'Especie::index');
 $routes->get('/especie/delete/(:num)', 'Especie::delete/$1');
 $routes->get('/especie/create/', 'Especie::create');
 $routes->post('/especie/store/', 'Especie::store');
+$routes->post('/get_especie_details', 'Especie::get_especie_details');
 $routes->get('/especie/visualizar/(:num)', 'Especie::verEspecie/$1');
 $routes->get('/especie/edit/(:num)', 'Especie::singleEspecie/$1');
 $routes->post('/update_especie', 'Especie::update');

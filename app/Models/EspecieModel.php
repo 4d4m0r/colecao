@@ -24,6 +24,20 @@ class EspecieModel extends Model
         'riscos_especie'
     ];
 
+    function getEspecieById($idEspecie)
+    {
+        $db = \Config\Database::connect();
+
+        $idEspecie = $idEspecie; 
+
+        $query = $db->query("SELECT * FROM especie WHERE id_especie = '$idEspecie'");
+
+        $row =  $query->getResultArray();
+
+        return $row;
+    }
+
+
     function getIdEspecie($data)
     {
         $db = \Config\Database::connect();
@@ -44,13 +58,14 @@ class EspecieModel extends Model
                                 AND procedencia_especie ='$procedencia_especie'
                                 AND substrato_especie ='$substrato_especie'
                                 AND riscos_especie ='$riscos_especie'");
-        
+
         $row =  $query->getResultArray();
 
         return $row;
     }
 
-    function getDadosEspecie(){
+    function getDadosEspecie()
+    {
         $db = \Config\Database::connect();
 
         $query = $db->query("SELECT DISTINCT especie.id_especie,especie.nome_especie FROM especie");
@@ -58,7 +73,8 @@ class EspecieModel extends Model
         return  $query->getResultArray();
     }
 
-    function verificaExisteEspecie($especie){
+    function verificaExisteEspecie($especie)
+    {
         $db = \Config\Database::connect();
 
         $nome_especie = $especie['nome_especie'];

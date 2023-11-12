@@ -86,4 +86,17 @@ class Especie extends BaseController
         $especie->update($id, $data);
         return $this->response->redirect(site_url('/especie'));
     }
+
+    public function get_especie_details()
+    {
+        $especie = new EspecieModel();
+
+        $id_especie = $this->request->getVar('id_especie');
+
+        $especie_details = $especie->getEspecieById($id_especie);
+
+        $data['especie_details'] = $especie_details;
+
+        return view('admin/crud_especie/especie_details', $data);
+    }
 }

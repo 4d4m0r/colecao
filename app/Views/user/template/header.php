@@ -22,6 +22,23 @@
     </style>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+    <!-- Adicione este script para exibir o alerta -->
+    <script>
+        $(document).ready(function() {
+            <?php if (session()->getFlashdata('success')) : ?>
+                // Crie um alerta do Bootstrap
+                var alertMessage = '<div class="alert alert-success alert-dismissible fade show position-fixed top-50 start-50 translate-middle" role="alert">' +
+                    '<?= session()->getFlashdata('success') ?>' +
+                    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
+                    '</div>';
+
+                // Adicione o alerta ao corpo da página
+                $('body').append(alertMessage);
+            <?php endif; ?>
+        });
+    </script>
+
+
     <script>
         function searchCultura() {
             var nome = document.getElementById('culturaSearch').value;
@@ -48,7 +65,8 @@
         }
 
         .navbar-nav .nav-link:hover {
-            color: #000 !important;;
+            color: #000 !important;
+            ;
             /* Cor do texto ao passar o mouse */
         }
     </style>

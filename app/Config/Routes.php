@@ -69,6 +69,11 @@ $routes->get('/cultura/edit/(:num)', 'Cultura::singleCultura/$1');
 $routes->post('/update_cultura', 'Cultura::update');
 $routes->post('/especie_cultura', 'Cultura::especie_cultura');
 
+// CRUD CONTATO
+$routes->get('/contatos', 'Contato::contatos');
+$routes->post('/contatos/store/', 'Contato::store');
+$routes->get('/contatos/ver_contato/(:num)', 'Contato::verContato/$1');
+
 // PLANILHA
 $routes->get('/export','Planilha::export');
 $routes->post('/import','Planilha::import');

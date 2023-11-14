@@ -153,6 +153,7 @@
             });
         });
     </script>
+
     <script>
         $(window).on("load", function() {
             $(".loader-wrapper").fadeOut("slow");
@@ -191,4 +192,5 @@
         <?php echo anchor(base_url('/especie'), 'Espécies', array('class' => 'a')) ?>
         <?php echo anchor(base_url('/cultura'), 'Cultura', array('class' => 'a')) ?>
         <?php echo anchor(base_url('/meio'), 'Meio de Cultivo', array('class' => 'a')) ?>
+        <?php echo anchor(base_url('/contatos'), 'Contatos', array('class' => 'a')) ?>
     </div>

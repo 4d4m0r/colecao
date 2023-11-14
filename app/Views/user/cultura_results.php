@@ -6,6 +6,7 @@
                 <tr>
                     <th>DPUA</th>
                     <th>Espécie</th>
+                    <th>Meio de cultivo</th>
                 </tr>
             </thead>
             <tbody>
@@ -13,6 +14,7 @@
                     <tr>
                         <td><?= $cultura['n_dpua_cultura'] ?></td>
                         <td><?= $cultura['nome_especie'] ?></td>
+                        <td><?= $cultura['meio_cultivo'] ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

@@ -80,12 +80,13 @@ class CulturaModel extends Model
     function getDadosCulturaPublica($nome) {
         $db = \Config\Database::connect();
 
-        $query = $db->query("SELECT c.n_dpua_cultura,UPPER(e.nome_especie) as nome_especie
+        $query = $db->query("SELECT c.n_dpua_cultura, UPPER(e.nome_especie) as nome_especie, m.meio_cultivo
         FROM cultura c 
-        JOIN especie e 
-        WHERE c.id_especie_cultura = e.id_especie
-        and e.nome_especie LIKE UPPER('%$nome%')
-        and c.restricao_cultura = 0");
+        JOIN especie e ON c.id_especie_cultura = e.id_especie
+        JOIN meio_cultivo m ON m.id_meio_cultivo = c.id_meio_cultura
+        WHERE e.nome_especie LIKE UPPER('%$nome%')
+        AND c.restricao_cultura = 0;
+        ");
    
        return  $query->getResultArray();
     }

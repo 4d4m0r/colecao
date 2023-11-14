@@ -127,6 +127,11 @@
       </div>
     </div>
     <div class="form-row">
+            <div class="form-group col-md-6">
+                <div id="especieDetails"></div>
+            </div>
+        </div>
+    <div class="form-row">
       <div class="form-group col-md-6">
         <label for="n_dpua_cultura">N° DPUA</label>
         <input type="text" class="form-control" id="n_dpua_cultura" name="n_dpua_cultura">
@@ -230,7 +235,7 @@
       <div class="col-md-4">
         <div class="form-floating mb-3">
           <label for="paises">País:</label>
-          <select id="paises" name="paises"  class="form-select">
+          <select id="paises" name="paises" class="form-select">
             <option value="">Selecione um país</option>
           </select>
         </div>

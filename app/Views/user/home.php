@@ -26,7 +26,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="input-group">
-          <input type="text" class="form-control" id="culturaSearch" placeholder="Pesquisar cultura...">
+          <input type="text" class="form-control" id="culturaSearch" placeholder="Pesquisar espécie...">
           <div class="input-group-append">
             <button class="btn btn-primary" type="button" onclick="searchCultura()">Pesquisar</button>
           </div>
